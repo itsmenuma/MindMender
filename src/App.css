@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Full screen container with centered content */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  justify-content: space-between;  /* Keeps header at the top and input at the bottom */
+  align-items: center;  /* Centers content horizontally */
+  background: linear-gradient(to right, #009688, #004d40);
+  color: white;
+  padding: 20px;
+}
+
+/* Center the message container */
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+  padding: 15px;
+  max-height: 80vh;  /* Limit the height */
+  width: 100%;  /* Full width */
+  align-items: center;  /* Centers the messages horizontally */
+  margin-bottom: 10px;
+}
+
+/* User and response message styling */
+.message-bubble {
+  max-width: 80%;  /* Adjusted to make the bubble larger */
+  padding: 12px 20px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  word-wrap: break-word;
+  line-height: 1.5;
+  display: inline-block;
+}
+
+.user-message {
+  background-color: #00796B;
+  color: white;
+  align-self: flex-end;
+  border-radius: 20px 20px 0 20px;
+}
+
+.response-message {
+  background-color: #B2DFDB;
+  color: #004D40;
+  align-self: flex-start;
+  border-radius: 20px 20px 20px 0;
+}
+
+/* Input box container */
+.inputBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: #004D40;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 600px;  /* Max width for input */
+  margin-top: 10px;
+}
+
+.inputBox input {
+  width: 85%;
+  border: none;
+  background: transparent;
+  color: white;
+  padding-left: 15px;
+  padding-right: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+.inputBox i {
+  font-size: 20px;
+  color: #B2DFDB;
+  cursor: pointer;
+}
+
+/* Button and header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;  /* Limit header width */
+  padding: 15px;
+  align-items: center;
+}
+
+button {
+  background-color: #00796B;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #004D40;
+}
